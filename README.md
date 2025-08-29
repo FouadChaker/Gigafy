@@ -1,28 +1,50 @@
-# Gigafy
+# Gigafy Shadcn Website
 
-the website is a landing page for a campaign to gather subscriptions and interest for a new idea in internet roaming. we offer the user a selectable number of gigabyte of internet connection with no time limit. we need to present the idea, its features, prices, a form to get the subscriber info and some survey questions.
+This project is a Next.js website scaffolded with TypeScript, Tailwind CSS, and shadcn/ui components.
 
-technologies:
-- HTML
-- CSS
-- JavaScript
-- tailwindcss
+## Setup
 
-fonts:
-- headers: "Montserrat"
-- body: "Open Sans"
+1. **Install dependencies:**
+   ```powershell
+   npm install
+   ```
+2. **Run the development server:**
+   ```powershell
+   npm run dev
+   ```
+3. **Open your browser:**
+   Visit `http://localhost:3000` to view the site.
 
-Icons & Illustrations:
-- Font Awesome Free (via CDN) for iconography
-- Heroicons (SVG) for modern line icons
-- Undraw.co or Humaaans for complementary illustrations
+## Usage
 
-sections:
-- Hero section with a catchy headline and call to action
-- Features section highlighting the benefits of the service
-- Pricing section with a caroussel of different gigabyte options
-- Subscription form for user information
-- Survey section for user feedback
-- Footer with contact information and social media links
+- All source code is in the `src` directory.
+- UI components from shadcn/ui can be added using:
+  ```powershell
+  npx shadcn@latest add <component>
+  ```
+  Example:
+  ```powershell
+  npx shadcn@latest add button
+  ```
+- Tailwind CSS is configured for rapid styling.
 
-when the subscription form is submitted, the data should be sent to a server endpoint (e.g., using fetch API) and then display in its place the survey section.
+## Customization
+
+- **Add new shadcn/ui components:**
+  Use the CLI as shown above.
+- **Modify theme colors:**
+  Edit CSS variables in `src/app/globals.css`.
+- **Update Tailwind config:**
+  Edit `tailwind.config.js` for custom settings.
+- **Change import aliases:**
+  Update `tsconfig.json` paths if needed.
+
+## Learn More
+
+- [Next.js Documentation](https://nextjs.org/docs)
+- [Tailwind CSS Documentation](https://tailwindcss.com/docs)
+- [shadcn/ui Documentation](https://ui.shadcn.com/docs)
+
+---
+
+Feel free to customize and extend the site as needed!
