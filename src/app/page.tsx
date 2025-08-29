@@ -30,7 +30,7 @@ export default function Home() {
     setShowSurvey(true);
   }
 
-  async function handleSurveySubmit(surveyAnswers: any) {
+  async function handleSurveySubmit(surveyAnswers: { [key: string]: string }) {
     if (!subscriber) return;
     const payload = { ...surveyAnswers, phone: subscriber.phone };
     await fetch("/api/survey", {

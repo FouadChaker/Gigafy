@@ -2,7 +2,8 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 
-export default function SubscriptionFormSection({ onSubmit }: { onSubmit: (data: any) => void }) {
+type SubscriptionFormData = { name: string; phone: string; email: string };
+export default function SubscriptionFormSection({ onSubmit }: { onSubmit: (data: SubscriptionFormData) => void }) {
   const [form, setForm] = useState({ name: "", phone: "", email: "" });
   const [loading, setLoading] = useState(false);
 

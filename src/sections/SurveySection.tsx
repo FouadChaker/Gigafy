@@ -16,12 +16,13 @@ const questions = [
 	},
 ];
 
+type SurveyAnswers = { [key: string]: string };
 export default function SurveySection({
 	phone,
 	onSubmit,
 }: {
 	phone: string;
-	onSubmit: (answers: any) => void;
+	onSubmit: (answers: SurveyAnswers) => void;
 }) {
 	const [answers, setAnswers] = useState<{ [key: string]: string }>({});
 	const [submitted, setSubmitted] = useState(false);

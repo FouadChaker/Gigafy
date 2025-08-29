@@ -1,5 +1,5 @@
 "use client";
-import { Carousel, CarouselContent, CarouselItem, CarouselPrevious, CarouselNext } from "@/components/ui/carousel";
+import { Carousel, CarouselContent, CarouselItem, CarouselPrevious, CarouselNext, type CarouselApi } from "@/components/ui/carousel";
 import Autoplay from "embla-carousel-autoplay";
 import { useRef } from "react";
 
@@ -13,13 +13,20 @@ const plans = [
 	{ gb: 100, price: "$140" }
 ];
 
-export default function PricingSection() {
-	const carouselApiRef = useRef(null);
+
+type PricingSectionProps = {
+	onSubscribe?: () => void;
+};
+
+export default function PricingSection({ onSubscribe }: PricingSectionProps) {
+	const carouselApiRef = useRef<CarouselApi | null>(null);
 	const autoplayPlugin = useRef(Autoplay({ delay: 3000 }));
 
 	function handleCardClick(idx: number) {
-		// @ts-ignore
 		carouselApiRef.current?.scrollTo(idx);
+		if (onSubscribe) {
+			onSubscribe();
+		}
 	}
 
 	return (
