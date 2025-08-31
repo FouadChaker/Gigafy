@@ -1,11 +1,11 @@
 {
-  "name": "gigafy-shadcn-copy",
-  "version": "0.2.0",
+  "name": "gigafy",
+  "version": "0.3.0",
   "private": true,
   "scripts": {
     "dev": "next dev --turbopack",
     "build": "next build --turbopack",
-    "start": "node_modules/next/dist/bin/next start",
+    "start": "next start",
     "lint": "eslint"
   },
   "dependencies": {
