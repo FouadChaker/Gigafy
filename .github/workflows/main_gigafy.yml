@@ -32,7 +32,7 @@ jobs:
         with:
           context: .
           push: true
-          tags: fouadchaker/${{ secrets.AZUREAPPSERVICE_CONTAINERUSERNAME_2A75FF88F06E4DA1BF2F1499B9ABB98E }}/gigafy-app:${{ github.sha }}
+          tags: fouadchaker/gigafy-app:${{ github.sha }}
           file: ./Dockerfile
 
   deploy:
@@ -58,6 +58,7 @@ jobs:
         with:
           app-name: 'gigafy'
           slot-name: 'Production'
-          images: 'fouadchaker/${{ secrets.AZUREAPPSERVICE_CONTAINERUSERNAME_2A75FF88F06E4DA1BF2F1499B9ABB98E }}/gigafy-app:${{ github.sha }}'
+          images: 'fouadchaker/gigafy-app:${{ github.sha }}'
 
           
+
