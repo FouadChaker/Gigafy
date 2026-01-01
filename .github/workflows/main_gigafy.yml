@@ -24,7 +24,6 @@ jobs:
       - name: Log in to container registry
         uses: docker/login-action@v2
         with:
-          registry: fouadchaker/
           username: ${{ secrets.AZUREAPPSERVICE_CONTAINERUSERNAME_2A75FF88F06E4DA1BF2F1499B9ABB98E }}
           password: ${{ secrets.AZUREAPPSERVICE_CONTAINERPASSWORD_233E8A9D8061417E9018E917E8D75A74 }}
 
@@ -60,4 +59,5 @@ jobs:
           app-name: 'gigafy'
           slot-name: 'Production'
           images: 'fouadchaker/${{ secrets.AZUREAPPSERVICE_CONTAINERUSERNAME_2A75FF88F06E4DA1BF2F1499B9ABB98E }}/gigafy-app:${{ github.sha }}'
+
           
